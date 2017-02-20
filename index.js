@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const {spawn} = require('child_process');
+const {spawn,
+       exec}  = require('child_process');
 const net     = require('net');
 const {port}  = require('./config.js');
 const help    = require('./help.js');
@@ -38,6 +39,10 @@ if (process.argv.indexOf('listen') != -1) {
       console.error(err);
     });
   }
+} else if (process.argv.indexOf('autostart') != -1) {
+  exec(__dirname+'/add_to_autostart.bat', (error, stdout, stderr)=>{
+    console.log(stdout);
+  });
 } else {
   help();
 }

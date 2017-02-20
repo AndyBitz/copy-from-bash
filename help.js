@@ -8,8 +8,9 @@ Usage: copyfb [listen || sent --text "sample text" [--timer 45000]]
   Commands:
 
     help           Display help
-    sent           (bash) Will sent data to the server. Requires --text option
+    sent           (bash) Will sent data to the server (requires --text option)
     listen         (windows) Starts server in background that listens on port 65467
+    autostart      (windows) Adds "copyfb listen" to the windows autostart
 
   Options:
   
