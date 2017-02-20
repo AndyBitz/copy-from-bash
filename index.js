@@ -45,4 +45,7 @@ if (process.argv.indexOf('listen') != -1) {
   });
 } else {
   help();
+  // tbh this code is completely utter shit, but it works
+  // which makes it probably less utter,
+  // but it is messy
 }
