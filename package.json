@@ -1,0 +1,21 @@
+{
+  "name": "copy-from-bash",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/andybitz/copy-from-bash",
+  "main": "index.js",
+  "scripts": {
+    "listen": "node index.js listen",
+    "sent": "node index.js sent --text hello_world --timer 10"
+  },
+  "bin": {
+    "copyfb": "./index.js",
+    "clip": "./clip"
+  },
+  "keywords": ["clipboard", "windows", "bash"],
+  "author": "andybitz",
+  "license": "MIT",
+  "dependencies": {
+    "copy-paste": "^1.3.0"
+  }
+}
