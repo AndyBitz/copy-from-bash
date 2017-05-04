@@ -6,18 +6,17 @@ const {port}  = require('./config.js');
 const server = net.createServer();
 server.listen(port);
 
-server.on('connection', (conn)=>{
+server.on('connection', conn => {
   if (!conn.remoteAddress.match(/127\.0\.0\.1|::ffff/)) {
     conn.destroy();
   }
-  conn.on('data', data=>{
+
+  conn.on('data', data => {
     parseData(data.toString());
   });
-  conn.on('error', err=>{
-    console.error(err);
-  });
-  conn.on('end', ()=>{
 
+  conn.on('error', err => {
+    console.error(err);
   });
 });
 
@@ -30,7 +29,7 @@ function parseData(data) {
   }
 
   if (res.timer) {
-    setTimeout(()=>{
+    setTimeout(() => {
       ncp.copy(prev);
     }, res.timer*1000);
   }
