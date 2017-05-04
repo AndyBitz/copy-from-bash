@@ -1,4 +1,6 @@
-module.exports = function() {
+const { version } = require('./package.json');
+
+module.exports.help = function() {
 
 const output = `
 
@@ -13,7 +15,8 @@ Usage: copyfb [listen || sent --text "sample text" [--timer 45000]]
     autostart      (windows) Adds "copyfb listen" to the windows autostart
 
   Options:
-  
+    
+    --version, -v           Prints the current version
     --text "sample text"    Text that will be copied to clipboard
     --timer 45              (Optional) Will overwrite the new clipboard with the old clipboard
                                        after the given time
@@ -32,4 +35,8 @@ Usage: copyfb [listen || sent --text "sample text" [--timer 45000]]
 
 console.log(output);
 
+};
+
+module.exports.version = function() {
+  console.log(version);
 };

@@ -5,12 +5,17 @@ const { spawn, exec } = require('child_process');
 const net = require('net');
 
 // libs
-const { port }  = require('./config.js');
-const help    = require('./help.js');
-
+const { port } = require('./config.js');
+const { help, version } = require('./help.js');
 
 if (process.argv.indexOf('help') != -1) {
   help();
+  process.exit();
+};
+
+if (process.argv.indexOf('--version') != -1
+    || process.argv.indexOf('-v') != -1) {
+  version();
   process.exit();
 };
 
@@ -54,5 +59,6 @@ if (process.argv.indexOf('listen') != -1) {
     console.log(stdout);
   });
 } else {
+  console.log(`\r\nCommand not found`);
   help();
 }
