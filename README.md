@@ -1,3 +1,5 @@
+Tool is now depracted, since windows allows to use _.exe_ files in bash. `/mnt/c/Windows/System32\clip.exe` should be used instead.
+
 # copy-from-bash
 
 Since _bash on windows_ does not support _xclip_ I made this tool as a work around.
