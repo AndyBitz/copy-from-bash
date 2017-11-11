@@ -1,4 +1,4 @@
-Tool is now depracted, since windows allows to use _.exe_ files in bash. `/mnt/c/Windows/System32\clip.exe` should be used instead.
+This tool is now depracted, since windows allows to use _.exe_ files in bash. `/mnt/c/Windows/System32/clip.exe` should be used instead.
 
 # copy-from-bash
 
